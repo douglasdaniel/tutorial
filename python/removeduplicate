@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+# Function to remove duplicate items from a list
+#
+def unique(seq):
+    # Initialize blank list
+    #
+    uniq = []
+    # Loop over given list
+    #
+    for x in seq:
+        # If item is not in new list
+        #
+        if x not in uniq:
+            # Copy to new list
+            #
+            uniq.append(x)
+    return uniq
+
+# Take list
+#
+s = raw_input('> ')
+ss = s.split(',')
+
+# Remove duplicate items
+sss = unique(ss)
+print sss
+

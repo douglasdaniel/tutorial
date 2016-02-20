@@ -1,0 +1,61 @@
+#!/usr/bin/env python
+
+# Making a dictionary uses key/value pairs
+#
+nums = {'one':1, 'two':2, 'three':3, 'four':4}
+
+# Print the key/value pairs of a dict (tuples)
+#
+print nums.items()
+
+# Print the keys of a dict
+#
+print nums.keys()
+
+# Print the values of a dict
+#
+print nums.values()
+
+# Dictionaries are pairs of keys : values
+#
+family = {'oldest' : 'mary', 'sec_oldest' : 'maya'}
+
+# Access them by key value
+#
+print "The oldest is %s" % (family['oldest'])
+
+# delete from a dictionary by key
+#
+del family['sec_oldest']
+
+# Access the elements of a dictionary value
+#
+print "The first letter of the oldest's name is %s" % (family['oldest'][0])
+
+# Just gonna leave this here ...
+#
+shopping_list = ["banana", "orange", "apple"]
+
+stock = {
+    "banana": 6,
+    "apple": 0,
+    "orange": 32,
+    "pear": 15
+}
+    
+prices = {
+    "banana": 4,
+    "apple": 2,
+    "orange": 1.5,
+    "pear": 3
+}
+
+# Compute the bill
+def compute_bill(food):
+    total = 0
+    for x in food:
+        if (stock[x] > 0):
+            total += prices[x]
+            stock[x] -= 1
+    return total
+

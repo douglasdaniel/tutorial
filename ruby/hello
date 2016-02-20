@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+=begin
+all this is comment
+here and here
+=end
+
+# Print hello world 
+#
+print "hello world\n"
+
+# Print with auto newline
+#
+puts "hello daniel"

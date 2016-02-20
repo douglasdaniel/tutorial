@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+# Function to remove odd numbers from a list
+#
+def purify(seq):
+    # Initialize the new sequence
+    #
+    pure = []
+    # Loop over the sequence
+    #
+    for x in seq:
+    	# If the number is even, even add to new list
+	#
+	if (int(x) % 2 == 0):
+            pure.append(x)
+    return pure
+
+s = raw_input('> ')
+ss = s.split(',')
+
+sss = purify(ss)
+print sss

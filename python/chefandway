@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+
+from sys import stdin
+
+# Read in the two lines and save their numbers to a list,
+# removing the newline char.
+#
+ln1 = [ x for x in stdin.readline().rstrip('\n').split(' ') ]
+ln2 = [ y for y in stdin.readline().rstrip('\n').split(' ') ]
+
+
+    

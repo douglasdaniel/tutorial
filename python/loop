@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+# Basic for loop structure
+#
+tasks = ['homework', 'reading', 'project', 'research']
+
+for i in tasks:
+    print i
+
+# For loop with index and item
+#
+for ind, i in enumerate(tasks):
+    print 'task %d: %s' % (ind, i)
+
+# zip can be used to loop through multiple lists
+# zip stops at shortest list end
+#
+fun = ['drink', 'games', 'girls', 'code', 'smoke?']
+
+for i, j in zip(tasks, fun):
+    print i, 'or', j, '?'
+
+# While loops can have an else statement.
+# Else executes when loop evaluates to false, but not
+# on break
+#
+i = 0
+while (i<11):
+    print 'We are on', i
+    i += 1
+else:
+    print 'we counted to 10'
+
+# For loops can also have an else statement
+# else is executed when the for loop finishes normally

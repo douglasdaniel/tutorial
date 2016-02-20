@@ -1,0 +1,56 @@
+#!/usr/bin/env python
+
+# We open a file for processing using the open() function.
+# We can assign the return of this call to a file object.
+# The second argument to open() is the mode in which we open
+# the file. They are: 'w'=write-only, 'r'=read-only, 'r+'= read
+# and write, 'a'=append
+#
+f = open('x1.txt', 'r+')
+
+# To write to a file, we use the write() method
+# on our file variable. write() only accepts strings
+#
+nums = [x for x in range(1,11)]
+
+for x in nums:
+    f.write('%d\n' % x)
+
+# We MUST close file to make writing successful
+#
+f.close()
+
+# We can read from a file using the read() method on the 
+# file object. This will read the entire file
+#
+g = open('x1.txt', 'r')
+print g.read()
+g.close()
+
+# To read a file line by line, we can use the readline()
+# method. Subsequent calls to readline() will return the next
+# line in the file.
+#
+h = open('x1.txt', 'r')
+print h.readline(), h.readline(), h.readline()
+h.close()
+
+# We can have Python automatically close our file by opening
+# the file with the 'with..as' construction
+#
+with open('x1.txt', 'r+') as i:
+    print i.read()
+
+# Check if a file object is closed, we can call the closed attribute
+# which returns a boolean
+#
+print i.closed
+
+# We can use the closed attribute to check if a file is closed
+#
+if not i.closed:
+    i.close() # close file if it is open
+
+
+
+

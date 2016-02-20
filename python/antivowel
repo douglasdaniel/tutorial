@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+
+from ask import ask
+
+# Remove vowel function
+#
+def anti_vowel(x):
+
+    # Make x a list 
+    #
+    x = list(x)
+    for c in x:
+
+        # if a character in the string/list is a vowel...
+        #
+        if c in 'aeiouAEIOU':
+
+            # Replace with '' (empty)
+            #
+            x[x.index('%c' % c)] = ''
+
+    # Cast list  back to string
+    #
+    x = str( ''.join(x) )
+    return x
+
+
+# Program loop variable (bool)
+#
+go = True
+
+while(go):
+    # Take an input string
+    #
+    s = raw_input("Please provide a string to vowel-kill: ")
+
+    # Remove the vowels from the string
+    ss = anti_vowel(s)
+
+    print 'With no vowel: %s' % ss
+    
+    # Ask to run program again
+    #
+    go = ask()

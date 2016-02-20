@@ -1,0 +1,31 @@
+
+
+# Create a new table in the database named 'celebs'
+#
+CREATE TABLE celebs (id INTEGER, name TEXT, age INTEGER);
+
+# Insert a new row into celebs table
+#
+INSERT INTO celebs (id, name, age) VALUES (1, 'Danie D', 23);
+
+# INSERT INTO is a clause that adds the specified row or rows.
+# celebs is the name of the table the row is added to.
+# (id, name, age) is a parameter identifying the columns that
+# data will be inserted into.
+# VALUES is a clause that indicates the data being inserted.
+# (1, 'Justin Bieber', 21) is a parameter identifying the values being inserted.
+
+# To view all columns in a table
+#
+SELECT * FROM celebs
+
+# To select a column of data
+#
+SELECT name FROM celebs
+
+# SELECT is a clause that indicates that the statement is a query.
+# You will use SELECT every time you query data from a database.
+# name specifies the column to query data from.
+# FROM celebs specifies the name of the table to query data from.
+# In this statement, data is queried from the celebs table. 
+

@@ -1,0 +1,49 @@
+#!/usr/bin/env python
+
+from ask import ask
+
+# Function to replace string with asterisks
+#
+def censor(phr, word):
+    # Check if word exists in phrase
+    #
+    if word in phr:
+        # Split phrase into list of words
+        #
+        words = phr.split()
+        # Loop over the list of words
+        #
+        for i in words:
+            # Find occurrences of word
+            #
+            if i == word:
+                # Find the word index
+                #
+                ind  = words.index(i)
+                # Replace word with '*'
+                #
+                words[ind] = '*' * len(word)
+        # Convert list back to string
+        #
+        phr = ' '.join(words)
+        # Return censored string
+        #
+        return phr
+    # Do nothing if the word is not in phrase
+    #
+    else:
+        print 'That word is not present.'
+
+# Loop control variable
+#
+go = True
+
+# Do while go is true
+#
+while(go):
+    string = raw_input('String: ')
+    explitive = raw_input('Word to remove: ')
+
+    new_string = censor(string, explitive)
+    print new_string
+    go = ask()

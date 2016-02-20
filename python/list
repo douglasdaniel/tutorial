@@ -1,0 +1,87 @@
+#!/usr/bin/env python
+
+# This is how you make a list
+#
+names = ["daniel", "david", "demetrius"]
+
+# This is how you index a list
+#
+two_oldest = names[0:3] # up to but not including index 3
+
+# This is how you search a list for an index
+#
+demetrius = names.index("demetrius")
+
+# We can insert into a list which moves list items after it
+#
+names.insert(0, "mary")
+
+# We can add to the end of the list
+#
+names.append("Maya")
+names.append("Jay")
+
+# We can take a value from the end of a list and return that
+# value
+#
+last = names.pop()
+
+# To delete a value from a list by index, we can use del
+#
+del names[0]
+
+# We can sort list
+#
+names.sort()
+
+# We can remove a value from list
+#
+name.remove("Jay")
+
+# We can split a string into a list using a specified delimiter
+#
+strring = 'the cat is brown'
+lisst = strring.split(' ') # split using space as delimiter
+# We can specify the number of splits by adding a second argument
+
+# Can join a list (or other sequence) into a string using join() method
+#
+s = ['d', 'a', 'n']
+ss = '--'.join(s) # d--a--n
+
+# We loop through a list with a for loop
+# The variable after 'for' is the loop variable. It will
+# be assigned to every value in the list.
+#
+for peeps in names:
+    print "There are %s letters in %s's name" % (len(peeps), peeps)
+
+# We can find the index of a char in a string
+#
+d = names[0].index('d') # 1
+
+# To slice a list, we specify [start:end:step]
+#
+lis = range(1,11)
+even = lis[2:11:2]
+
+# The default start is 0. default end is end of list
+#
+odd = lis[::2]
+
+# To move from right to left, we use a negative step
+#
+lis_reverse = lis[::-1]
+
+# We can also slice a list by applying a filter
+# The first argument to filter() is a function used to filter the list
+#
+lis = range(1,11)
+even = filter(lambda x: x % 2 == 0, lis)
+
+# Lambda is the anonymous function operator
+# lambda is used to quicky define a function or to 
+# define a nameless function
+f = lambda x, y: x + y 
+five = f(2,3) # sums the two arguments
+

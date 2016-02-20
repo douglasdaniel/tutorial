@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+
+# Make some lists
+#
+bag1 = ['apple', 'orange', 'pear', 'banana', 'orange', 'pear']
+bag2 = ['grapes', 'apple', 'banana']
+
+# Sets are similar to lists, except that sets do not contain
+# any duplicate entries. We can create a set using the set()
+# function
+#
+print 'list ' + str(bag1)
+bag1  = set(bag1)
+print bag1
+
+bag2 = set(bag2)
+
+# To find out what items are common to two sets, we can use the
+# intersection() set method
+#
+print 'intersection'
+print bag1.intersection(bag2)
+print bag2.intersection(bag1)
+
+# To determine what elements are only in one bag, we can use the
+# symmetric_difference() method
+#
+print 'symmetric difference'
+print bag1.symmetric_difference(bag2)
+print bag2.symmetric_difference(bag1)
+
+# To find out which items are only in bag1
+#
+print bag1.difference(bag2) # bag1 - bag2
+# only in bag2
+#
+print bag2.difference(bag1)
+
+# To see the all unique items across both bags
+#
+print bag1.union(bag2)

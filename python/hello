@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+# Some basic python stuff
+
+"""Ths is all comment
+here
+and here
+"""
+
+print "Hello World"
+
+def welcom():
+    print "Welcome to Python"
+    
+welcom()
+
+first_initial = "Daniel"[0]
+
+last_name = "Douglas"
+
+print "Hello %s. %s" % (first_initial, last_name)

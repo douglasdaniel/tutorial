@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+
+# We can build lists using lists on the fly using list comprehension
+# To build a list of numbers 1-10
+#
+a = range(1,11)
+
+# To build the same list using list comprehension..
+#
+b = [x for x in range(1,11)]
+
+# To print the doubled values of the list above
+#
+c = [x*2 for x in range(1,11)]
+
+# To print only the doubled values that are divisible by 3
+#
+d = [x*2 for x in range(1,11) if x*2 % 3 == 0]

@@ -1,0 +1,47 @@
+#!/usr/bin/mongo
+
+# Create or switch to a database
+use test
+
+# Show database statistics
+db.stats()
+
+# Must insert at least one document into a database for it to show
+db.DOCUMENT_NAME.insert({"key" : "value"})
+
+# To delete the current database
+db.dropDatabase()
+
+# Create a collection. the options parameter is optioinal
+db.createCollection(name, options)
+
+## with options
+ db.createCollection("mycol", { capped : true, autoIndexID : true, size : 6142800, max : 10000 } )
+
+# show collections with the 'show' command
+show collections
+
+# Mongodb creates collections automatically when you insert a document using the insert() method
+db.COLLECTION_NAME.insert(document)
+
+
+# You can drop collections using the drop() method
+db.COLLECTION_NAME.drop()
+
+# To insert the document you can use db.post.save(document) also.
+# If you don't specify _id in the document then save() method will work same as insert() method.
+# If you specify _id then it will replace whole data of document containing _id as specified in save() method.
+
+# To query data in a document, use the find() method
+db.COLLECTION_NAME.find()
+
+# To display documents in a pretty way, you can use the pretty() method
+db.COLLECTION.find().pretty()
+
+# To delete a document use the remove() method
+# Remove takes two arguments. First is deletion criteria, second
+# is the justOne flag. If justOne is set to True or 1, only one document is 
+# is deleted. If no criteria is provided, and justOne is not set, all documents are
+# removed
+db.COLLECTION.remove({'name':'Daniel'}, 1) # remove the first document whose name key has value Daniel
+

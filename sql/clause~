@@ -1,0 +1,6 @@
+
+
+# Create a new table in the database named 'celebs'
+#
+CREATE TABLE celebs (id INTEGER, name TEXT, age INTEGER);
+
