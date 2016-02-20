@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-# Print hello world 
-#
-print "hello world\n"
-
-# Print with auto newline
-#
-puts "hello daniel"
