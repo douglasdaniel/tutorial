@@ -44,6 +44,15 @@ db.COLLECTION_NAME.find()
 # To display documents in a pretty way, you can use the pretty() method
 db.COLLECTION.find().pretty()
 
+# To update a document (overwrite) use the update() method on a collection
+# and provide method with query criterion
+db.COLLECTION.update( {'name':'daniel'}, {'name':'danny'} )
+# This method overwrites the document with the new one 
+
+# To update or add a single field without overwriting the entire document 
+# user the $set attribute
+db.COLLECTION.update({'name':'daniel'}, {$set : {'name':'danny'}})
+
 # To delete a document use the remove() method
 # Remove takes two arguments. First is deletion criteria, second
 # is the justOne flag. If justOne is set to True or 1, only one document is 
@@ -51,3 +60,8 @@ db.COLLECTION.find().pretty()
 # removed
 db.COLLECTION.remove({'name':'Daniel'}, 1) # remove the first document whose name key has value Daniel
 
+# To view database indexes
+db.COLLECTION.getIndexes()
+
+# To drop an index, use
+db.COLLECTION.dropIndex('INDEX_NAME')

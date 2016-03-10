@@ -78,4 +78,6 @@ mydb.mycollection.create_index([('name', pymongo.ASCENDING)], unique=True)
 # Check current indexes like so
 mydb.mycollection.index_information() # or convert output to (list) for easy reading
 
+# MongoDB stores data in BSON format. BSON strings are UTF-8 encoded so
+# PyMongo must ensure that any strings it stores contain only valid UTF-8 data
 
